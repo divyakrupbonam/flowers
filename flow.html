@@ -1,0 +1,147 @@
+<!DOCTYPE html>
+<html lang="eng">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="flowers.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+
+    <title>Flowers Responsive web page</title>
+</head>
+
+<body>
+    <div class="background">
+        <div class="Navbar">
+            <ul>
+                <li><a href="#Profile">Profile</a></li>
+                <li><a href="#About">About</a></li>
+                <li><a href="#Service">Service</a></li>
+                <li><a href="#Contact">Contact</a></li>
+            </ul>
+
+        </div>
+        <div class="container">
+            <div>FLARISS</div>
+            <p>Spring flower Bouquit for you</p>
+            <button>Read More</button>
+        </div>
+    </div>
+    <div class="icons">
+        <div class="icon-item">
+            <i class='fas fa-truck' style='font-size:36px'></i>
+            <p class="icon-title">Shipping & Return</p>
+            <p class="icon-desc">Free Shiiping all order</p>
+        </div>
+        <div class="icon-item">
+            <i class='fas fa-clock' style='font-size:36px'></i>
+            <p class="icon-title">Support 24/7</p>
+            <p class="icon-desc">Support 24 hours a day</p>
+        </div>
+        <div class="icon-item">
+            <i class='fas fa-comment-dollar' style='font-size:36px'></i>
+            <p class="icon-title">Money Return</p>
+            <p class="icon-desc">30 days for free return</p>
+        </div>
+        <div class="icon-item">
+            <i class='fas fa-gift' style='font-size:36px'></i>
+            <p class="icon-title">Free Gifts</p>
+            <p class="icon-desc">Buy more get free gifts</p>
+        </div>
+    </div>
+    <div class="flowers-container">
+        <div class="block-1">
+            <p>The Edit Autumn Jackets</p>
+            <button>shop Now</button>
+        </div>
+        <br>
+        <div class="block-2">
+            <p> Trendy New Collections</p>
+            <button>Shop Now</button>
+        </div>
+    </div>
+    <br>
+    <br>
+    <div class="product-container">
+        <div class="product-block">
+            <img src="https://pngimg.com/uploads/bouquet/small/bouquet_PNG29.png" alt="Product Image" class="Product-image">
+            <div class="product-info">
+                <p class="product-description">Flower Beautiful.</p>
+                <p class="product-price">$99.99</p>
+                <button class="buy-button">Buy Now</button>
+            </div>
+        </div>
+        <div class="product-block">
+            <img src="https://pngimg.com/uploads/bouquet/small/bouquet_PNG11.png" alt="Product Image" class="Product-image">
+            <div class="product-info">
+                <p class="product-description">Flower Beautiful Pink vairable </p>
+                <p class="product-price">$99.99</p>
+                <button class="buy-button">Buy Now</button>
+            </div>
+        </div>
+
+        <div class="product-block">
+            <img src="https://pngimg.com/uploads/bouquet/small/bouquet_PNG11.png" alt="Product Image" class="Product-image">
+            <div class="product-info">
+                <p class="product-description">Trepical sympathy shelf</p>
+                <p class="product-price">$500.7</p>
+                <button class="buy-button">Buy Now</button>
+
+            </div>
+
+        </div>
+        <div class="product-block">
+            <img src="https://pngimg.com/uploads/bouquet/small/bouquet_PNG39.png" alt="Product Image" class="Product-image">
+            <div class="product-info">
+                <p class="product-description">Superemium Bouduet</p>
+                <p class="product-price">$99.99</p>
+                <button class="buy-button">Buy Now</button>
+            </div>
+        </div>
+    </div>
+    <div class="links">
+        <div class="des">Follow Us On.</div>
+        <i class="fa fa-instagram" style="font-size:48px;color:hotpink"></i>
+        <i class="fa fa-twitter" style="font-size:48px;color:hotpink"></i>
+        <i class="fa fa-whatsapp" style="font-size:48px;color:hotpink"></i>
+
+    </div>
+    <div class="container-1">
+        <h1>feed·​back</h1>
+        <!-- Heading will appear above the drag boxes -->
+
+        <div class="droptarget" ondrop="drop(event)" ondragover="allowDrop(event)">
+            <p ondragstart="dragStart(event)" ondragend="dragEnd(event)" draggable="true" id="dragtarget">Drag me!</p>
+        </div>
+
+        <p id="demo"></p>
+
+        <div class="droptarget" ondrop="drop(event)" ondragover="allowDrop(event)"></div>
+    </div>
+
+
+    <script>
+        function dragStart(event) {
+            event.dataTransfer.setData("Text", event.target.id);
+            document.getElementById("demo").innerHTML = "Dragging started";
+        }
+
+        function dragEnd(event) {
+            document.getElementById("demo").innerHTML = "Thank You.";
+        }
+
+        function allowDrop(event) {
+            event.preventDefault();
+        }
+
+        function drop(event) {
+            event.preventDefault();
+            const data = event.dataTransfer.getData("Text");
+            event.target.appendChild(document.getElementById(data));
+        }
+    </script>
+
+</body>
+
+</html>
